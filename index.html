@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decbase - Moder interior to your house</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/classes.css" />
+    <script defer src="js/script.js"></script>
+    <script defer src="js/slider.js"></script>
+  </head>
+  <body class="text">
+    <!-- Header -->
+    <header class="header-wrapper">
+      <div class="sticky-bar">
+        <div class="header container">
+          <div class="header-logo-wrapper">
+            <img src="images/decbase_logo.svg" alt="Decbase Logo" />
+          </div>
+          <nav class="nav tx-nav uppercase" data-header-nav>
+            <ul class="menu">
+              <li data-nav-menu-item>
+                <a class="active" href="#">home</a>
+              </li>
+              <li data-nav-menu-item>
+                <a href="#">project</a>
+              </li>
+              <li data-nav-menu-item>
+                <a href="#">services</a>
+              </li>
+              <li data-nav-menu-item>
+                <a href="#">about</a>
+              </li>
+              <li data-nav-menu-item>
+                <a href="#">blog</a>
+              </li>
+              <li data-nav-menu-item>
+                <a href="#">shop</a>
+              </li>
+              <li data-nav-menu-item>
+                <a href="#">contact</a>
+              </li>
+            </ul>
+            <a class="tx-nav-sign-up tx-nav-sign-up-bg" href="#">sign up</a>
+          </nav>
+          <div class="burger-button-wrapper-mobile-menu">
+            <button class="burger-button" id="burger-id">
+              <span class="burger-button-line first-line"></span>
+              <span class="burger-button-line second-line"></span>
+              <span class="burger-button-line third-line"></span>
+            </button>
+            <div class="mobile-menu" tabindex="0">
+              <nav class="tx-nav uppercase">
+                <ul class="mobile-menu-list" data-mobile-menu>
+                  <li>
+                    <a
+                      class="mobile-menu-link"
+                      href="#"
+                      data-mobile-menu-link="home"
+                      >home</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="mobile-menu-link"
+                      href="#"
+                      data-mobile-menu-link="project"
+                      >project</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="mobile-menu-link"
+                      href="#"
+                      data-mobile-menu-link="services"
+                      >services</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="mobile-menu-link"
+                      href="#"
+                      data-mobile-menu-link="about"
+                      >about</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="mobile-menu-link"
+                      href="#"
+                      data-mobile-menu-link="blog"
+                      >blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="mobile-menu-link"
+                      href="#"
+                      data-mobile-menu-link="shop"
+                      >shop</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="mobile-menu-link"
+                      href="#"
+                      data-mobile-menu-link="contact"
+                      >contact</a
+                    >
+                  </li>
+                </ul>
+                <a
+                  class="tx-nav-sign-up tx-nav-sign-up-bg"
+                  id="mobile-sign-up"
+                  href="#"
+                  >sign up</a
+                >
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="wrapper-section">
+      <section class="hero container dots">
+        <div class="hero-start">
+          <p class="main-subtitle uppercase">modern interior</p>
+          <h1 class="main-title">create your interior design.</h1>
+          <p class="main-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation.
+          </p>
+          <a class="hero-button buttons uppercase" href="#">contact</a>
+        </div>
+        <div class="hero-end">
+          <div class="hero-image-wrapper">
+            <img
+              class="hero-image"
+              src="images/main_img.jpg"
+              alt="main image"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Our Service -->
+    <section class="our-service container dots">
+      <div class="our-service-top">
+        <div>
+          <p class="subtitle uppercase">what we do</p>
+          <h2 class="section-title">our service</h2>
+        </div>
+        <div class="chevron-buttons-wrapper">
+          <button class="chevron-button" data-service-slider-button="prev">
+            <svg
+              class="chevron-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+            </svg>
+          </button>
+          <button
+            class="chevron-button active"
+            data-service-slider-button="next"
+          >
+            <svg
+              class="chevron-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="slider-wrapper">
+        <div class="our-service-bottom">
+          <div class="our-service-card" data-card>
+            <img src="images/interior_desing_icon.svg" alt="interrior icon" />
+            <div>
+              <h2 class="card-title">interior design</h2>
+              <p class="card-text-color">
+                Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod
+                tempor incididunt ut labore.
+              </p>
+            </div>
+          </div>
+          <div class="our-service-card color-accent-two" data-card>
+            <img src="images/architecture_icon.svg" alt="architecture icon" />
+            <div>
+              <h2 class="card-title card-title-color-accent-two">
+                architecture
+              </h2>
+              <p class="card-text-color card-text-color-accent-two">
+                Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod
+                tempor incididunt ut labore.
+              </p>
+            </div>
+          </div>
+          <div class="our-service-card" data-card>
+            <img src="images/planning_icon.svg" alt="planning icon" />
+            <div>
+              <h2 class="card-title">planning</h2>
+              <p class="card-text-color">
+                Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod
+                tempor incididunt ut labore.
+              </p>
+            </div>
+          </div>
+          <div class="our-service-card" data-card>
+            <img
+              src="images/hammer_and_nail_icon.svg"
+              alt="hammer and nail icon"
+            />
+            <div>
+              <h2 class="card-title">furbishing</h2>
+              <p class="card-text-color">
+                Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod
+                tempor incididunt ut labore.
+              </p>
+            </div>
+          </div>
+          <div class="our-service-card" data-card>
+            <img src="images/lamps_icon.svg" alt="lamps icon" />
+            <div>
+              <h2 class="card-title">lighting</h2>
+              <p class="card-text-color">
+                Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod
+                tempor incididunt ut labore.
+              </p>
+            </div>
+          </div>
+          <div class="our-service-card" data-card>
+            <img src="images/wallpaper_icon.svg" alt="wallpaper icon" />
+            <div>
+              <h2 class="card-title">Wallpaper</h2>
+              <p class="card-text-color">
+                Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod
+                tempor incididunt ut labore.
+              </p>
+            </div>
+          </div>
+          <div class="our-service-card" data-card>
+            <img
+              src="images/paint_roller_icon.svg"
+              alt="paint-roller icon icon"
+            />
+            <div>
+              <h2 class="card-title">Painting</h2>
+              <p class="card-text-color">
+                Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod
+                tempor incididunt ut labore.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About us -->
+    <section class="about-us container dots">
+      <div class="about-us-wrapper-top dots">
+        <div class="about-us-wrapper-top-start">
+          <div class="about-us-wraper-top-image-wrapper">
+            <img src="images/about_us_img.jpg" alt="interior" />
+          </div>
+        </div>
+        <div class="about-us-wrapper-top-end">
+          <p class="subtitle">about us</p>
+          <h2 class="section-title">
+            Interioris The Will <br />
+            of An Epoch Mextreo
+          </h2>
+          <p class="text">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form injected humour,
+            or randomised words which don't look even slightly believable.If you
+            are going to use a passage of Lorem Ipsum, sure there isn't anything
+            embarrassing hidden the middleof text. All the Lorem Ipsum
+            generators on the Internettend to repeat predefined chunks as
+            necessary,making this the first true generator on the Internet.
+          </p>
+          <span class="expand-read">expand read..</span>
+          <a class="buttons" href="#">learn more</a>
+        </div>
+      </div>
+      <div class="about-us-wrapper-bottom">
+        <div class="about-us-wrapper-bottom-start">
+          <p class="mask-text">20</p>
+          <h2 class="section-title">
+            Years Of Successful Working <br />
+            The Market
+          </h2>
+          <a class="buttons" href="#">read more</a>
+        </div>
+        <div class="about-us-wrapper-bottom-end">
+          <div class="about-us-wraper-bottom-image-wrapper">
+            <img src="images/abouts_us_two_img.jpg" alt="interior" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievments  -->
+    <section class="achievments grid">
+      <h2 class="section-title">
+        3000+ Completed Work <br />
+        Which WE have Successfully Done
+      </h2>
+      <div class="achievments-cards dots">
+        <div class="achievments-card-outer">
+          <div class="achievments-card">
+            <span class="achievments-card-bold-text">980</span>
+            <p class="achievments-card-text">project</p>
+          </div>
+        </div>
+
+        <div class="achievments-card-outer">
+          <div class="achievments-card">
+            <span class="achievments-card-bold-text">520</span>
+            <p class="achievments-card-text">happy client</p>
+          </div>
+        </div>
+
+        <div class="achievments-card-outer">
+          <div class="achievments-card">
+            <span class="achievments-card-bold-text">330</span>
+            <p class="achievments-card-text">winners</p>
+          </div>
+        </div>
+
+        <div class="achievments-card-outer">
+          <div class="achievments-card">
+            <span class="achievments-card-bold-text">120</span>
+            <p class="achievments-card-text">recoment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials container">
+      <div class="testimonials-wrapper-top">
+        <div class="testimonials-subtitle-and-title-wrapper">
+          <p class="subtitle">testimonials</p>
+          <h2 class="section-title">client says about us</h2>
+        </div>
+        <div class="chevron-buttons-wrapper">
+          <button class="chevron-button" data-testimonial-slider-button="prev">
+            <svg
+              class="chevron-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+            </svg>
+          </button>
+          <button
+            class="chevron-button active"
+            data-testimonial-slider-button="next"
+          >
+            <svg
+              class="chevron-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="testimonials-wrapper-bottom">
+        <div class="testimonials-cards-wrapper">
+          <div class="testimonial-card">
+            <div class="testimonial-card-image-wrapper">
+              <img src="images/testimonial_person_one.jpg" alt="person one" />
+            </div>
+            <div>
+              <p class="testimonial-card-person-info">
+                Louis Saville <span>/CEO at Google inc</span>
+              </p>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card-image-wrapper">
+              <img src="images/testimonial_person_two.jpg" alt="person two" />
+            </div>
+            <div>
+              <p class="testimonial-card-person-info">
+                Rekha Varadwaz <span>/Manager at Nike inc</span>
+              </p>
+
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card-image-wrapper">
+              <img
+                src="images/testimonials_person_three.jpg"
+                alt="person three"
+              />
+            </div>
+            <div>
+              <p class="testimonial-card-person-info">
+                Beihe Feng <span>/Art Designer LSU</span>
+              </p>
+
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section class="news grid dots">
+      <div class="news-subtitle-and-title-wrapper">
+        <p class="subtitle">latest news</p>
+        <h2 class="section-title">from our blog</h2>
+      </div>
+      <div class="news-cards">
+        <div class="news-card">
+          <div class="news-card-image-wrapper">
+            <div>
+              <img
+                src="images/latest_news_img_one.jpg"
+                alt="lates news image one"
+              />
+            </div>
+          </div>
+          <h3 class="news-title">2020 Interior Design Trends</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a class="buttons" href="#">continue reading....</a>
+        </div>
+        <div class="news-card">
+          <div class="news-card-image-wrapper">
+            <div>
+              <img
+                src="images/latest_news_img_two.jpg"
+                alt="lates news image two"
+              />
+            </div>
+          </div>
+          <h3 class="news-title">28 Notable Product at ARC Interior Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a class="buttons" href="#">continue reading....</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe -->
+    <section class="subscribe dots">
+      <h2 class="section-title">dont't forget to sign up</h2>
+      <p>
+        find out early about all upcoming promotions and new product releases
+        with our newsletter.
+      </p>
+      <form class="subscribe-form">
+        <input
+          class="subscribe-email-input"
+          type="email"
+          placeholder="Enter your email address....."
+        />
+        <button class="subscribe-button">subscribe</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer grid">
+      <div class="footer-top">
+        <div class="footer-logo-wrapper">
+          <img
+            class="footer-logo"
+            src="images/decbase_logo.svg"
+            alt="decbase_logo"
+          />
+          <p>
+            But i must explain to you all this mistaken idea of dencouncing
+            pleasure.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Our Company</a></li>
+            <li><a href="#">Services WE provide</a></li>
+            <li><a href="#">Career & Opportunity</a></li>
+            <li><a href="#">Privacy & policy</a></li>
+            <li><a href="#">Contact US</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About Company</a></li>
+            <li><a href="#">Our Testimonials</a></li>
+            <li><a href="#">Latest News</a></li>
+            <li><a href="#">Our misson</a></li>
+            <li><a href="#">Get a free Quot</a></li>
+          </ul>
+        </div>
+        <div class="footer-contacts">
+          <h3>Contact us</h3>
+          <address>
+            <ul>
+              <li>Sagrada Familia, Herba</li>
+              <li>Street Front USA</li>
+              <li>
+                <a href="mailto:brandoxide@gmail.com">brandoxide@gmail.com</a>
+              </li>
+              <li>
+                <a href="tel:+002568423591">002-568423591</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-socials">
+          <h3>Follow Us</h3>
+          <div class="footer-socials-wrapper">
+            <a class="footer-social-link" href="#"
+              ><img src="images/facebook_logo.svg" alt="facebook logo"
+            /></a>
+            <a class="footer-social-link active" href="#"
+              ><img src="images/twitter_logo.svg" alt="twitter logo"
+            /></a>
+            <a class="footer-social-link" href="#"
+              ><img src="images/instagram_logo.svg" alt="instagram logo"
+            /></a>
+            <a class="footer-social-link" href="#"
+              ><img src="images/linked_in_logo.svg" alt="linked in logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          Copyright @ 2020
+          <a class="footer-brand-name" href="#">Brandoxide</a>.all rights
+          reserved
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

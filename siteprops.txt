@@ -1,0 +1,94 @@
+open sans [400, 600, 700]
+poppins [500, 600]
+raleway [500]
+
+
+text [#212121, #646464, #ffffff, #37806B]
+elements [#CAA892, #37806B, #B0855B, #F8F8F8, #C4C4C4, #EEEEEE, #D5D5D5]
+shadows [#000000/14%, #000000/10%, #000000/30%, #426054/15%]
+
+text [#212121, #646464, #ffffff, #37806B]
+elements [#CAA892, #37806B, #B0855B, #F8F8F8, #C4C4C4, #EEEEEE, #D5D5D5]
+shadows [#000000/14%, #000000/10%, #000000/30%, #426054/15%]
+
+Font-Sizes {
+Menu: {font-size: 1rem, line-height: auto, font-weight: 600},
+MainSubtitle: {font-family: Open-Sans, font-size: 1.25rem, line-height: auto, font-weight: 600},
+MainTitle: {font-family: Poppins, font-size: 4.5rem, line-height: 4.875rem},
+Subtitle: {font-family: Poppins, font-size: 1.25rem, line-height: auto, font-weight: 600},
+Text: {font-family: Open-Sans, font-size: 1.125rem, line-height: 1.75rem, font-weight: 400},
+Buttons: {font-family: Open-Sans, font-size: 1.125rem, line-height: auto, font-weight: 700},
+MenuButton: {font-family: Open-Sans, font-size: 1rem, line-height: auto, font-weight: 600},
+EmailInputfieldText: {font-family: Raleway, font-size: 1.125rem, line-height: auto, font-weight: 500},
+CardTitle: {font-family: Open-Sans, font-size: 1.5rem, line-height: auto, font-weight: 700},
+LatestNewsTitles: {font-family: Open-Sans, font-size: 1.875rem, line-height: auto, font-weight: 600}
+}
+
+:root { 
+
+/* Font Family */
+--fm-opens-sans: 'Open Sans';
+--fm-poppins: 'Poppins';
+--fm-raleway: 'Raleway';
+
+/* Font Size */
+--tx-menu: 1rem;
+--tx-base: 1.125rem;
+--tx-subtitle: 1.25rem;
+--tx-card-title: 1.5rem;
+--tx-latest-news-title: 1.875rem;
+--tx-main-title: 4.5rem;
+
+
+/* Font Weight */
+--fw-fourHundred: 400; 
+--fw-fiveHundred: 500;
+--fw-sixHundred: 600;
+--fw-sevenHundred: 700;
+
+
+/* Colors */
+--colorMain: #ffffff;
+--colorSecondary: #F8F8F8;
+--colorAccent: #37806B;
+--colorAccentTwo: #CAA892;
+--colorAccentThree: #B0855B;
+--colorTextMain: #646464;
+--colorTextSecondary: #212121;
+--colorInputField: #EEEEEE;
+--colorSocialLogo: #D5D5D5;
+--colorLine: #C4C4C4;
+--colorShadowCard: 0 8px 20px 0 hsla(0, 0, 0, 0.14);
+--colorShadowArrowButtons: -1px 3px 10px 0 hsla(0, 0, 0, 0.3);
+--colorShadowAchivements: 0 13px 16px 0 hsla(0, 0, 0, 0.1);
+--colorShadowTestimonials: 7px 7px 30px 5px hsla(156, 19, 32, 0.15);
+
+/* Borders */
+--borderOne: 0.9375rem;
+--borderTwo: 1.25rem;
+--borderThree: 1.5635rem;
+--borderFour: 2.1875rem;
+--borderFive: 2.5rem;
+--borderSix: 4.375rem;
+--borderSeven: 6.25rem;
+--borderEight: 8.75rem;
+--borderRoundedFull: 50%;
+}
+
+*, 
+*::before,
+*::after {
+ box-sizing: border-box;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+
+ On basis: 1rem = 16px
+
+ max-width >= 1200 padding-inline: 4rem; (64px)
+ max-width >= 992 - 768 padding-inline: 3rem; (48px)
+ max-width >= 576 padding-inline: 2rem; (32px)
+ max-width >= 320 padding-inline: 1rem; (16px)
