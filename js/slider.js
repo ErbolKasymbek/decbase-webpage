@@ -1,4 +1,4 @@
-// Slider Object Function - Refactored by Google GEMINI AI
+// Slider Object Factory Function
 function createSliderObject(wrapper, gap, btns, cards) {
   return {
     wrapper: wrapper,
@@ -14,17 +14,16 @@ function createSliderObject(wrapper, gap, btns, cards) {
     observeCard: null,
     observeWrapper: null,
 
-    // Helper to dynamically calculate boundaries on resize
+    // Calculates precise boundary dimensions dynamically
     updateDimensions() {
       const cardWidth = this.cards[0].getBoundingClientRect().width;
       this.cardAndGap = cardWidth + this.gap;
 
-      // Correct mathematical boundary for track translation
       const maxScrollableCards = this.cardsLength - this.cardsShown;
       this.end =
         maxScrollableCards > 0 ? -(maxScrollableCards * this.cardAndGap) : 0;
 
-      // Enforce bounds if translation is out of range after a resize
+      // Safety constraint: Prevent layout canvas overflow states on resize
       if (this.translateX < this.end) {
         this.translateX = this.end;
         this.updateTransform();
@@ -41,15 +40,13 @@ function createSliderObject(wrapper, gap, btns, cards) {
     toggleButtonClasses() {
       if (this.buttons.length < 2) return;
 
-      // Assuming buttons[0] is Prev and buttons[1] is Next
-      // Highlight Prev if we have scrolled forward
+      // buttons[0] is Prev, buttons[1] is Next based on HTML source order
       if (this.translateX < this.start) {
         this.buttons[0].classList.add("active");
       } else {
         this.buttons[0].classList.remove("active");
       }
 
-      // Dim Next if we reached the absolute end
       if (this.translateX <= this.end) {
         this.buttons[1].classList.remove("active");
       } else {
@@ -60,11 +57,10 @@ function createSliderObject(wrapper, gap, btns, cards) {
     moveX() {
       const initialWidth = this.cards[0].clientWidth;
 
-      // Clean up existing observers if moveX is rerun
       if (this.observeCard) this.observeCard.disconnect();
       if (this.observeWrapper) this.observeWrapper.disconnect();
 
-      // Handle Wrapper Resizing and Responsive Card Basis
+      // Monitors responsive breakout limits cleanly
       this.observeWrapper = new ResizeObserver((entries) => {
         const wrapperWidth = entries[0].contentBoxSize[0].inlineSize;
 
@@ -76,23 +72,21 @@ function createSliderObject(wrapper, gap, btns, cards) {
           }
         });
 
-        // Recalculate dimensions after card layout stabilizes
         this.updateDimensions();
       });
 
       this.observeWrapper.observe(this.wrapper);
 
-      // Event Listeners for controls
+      // Event Control Handlers
       this.buttons.forEach((btn) => {
         btn.addEventListener("click", (e) => {
-          // Dynamically read the action key value (prev or next) from dataset keys
+          // e.currentTarget bypasses nested inner SVGs to read data properties directly
           const dataset = e.currentTarget.dataset;
           const action = Object.values(dataset)[0];
 
           if (action === "next") {
             if (this.translateX > this.end) {
               this.translateX -= this.cardAndGap;
-              // Prevent overshooting the final bounds
               if (this.translateX < this.end) this.translateX = this.end;
               this.updateTransform();
             }
@@ -101,7 +95,6 @@ function createSliderObject(wrapper, gap, btns, cards) {
           if (action === "prev") {
             if (this.translateX < this.start) {
               this.translateX += this.cardAndGap;
-              // Prevent overshooting the start bounds
               if (this.translateX > this.start) this.translateX = this.start;
               this.updateTransform();
             }
@@ -109,14 +102,16 @@ function createSliderObject(wrapper, gap, btns, cards) {
         });
       });
 
-      // Initial layout setup
+      // Initialize dimensions instantly
       this.updateDimensions();
       this.toggleButtonClasses();
     },
   };
 }
 
-// Our Service section
+// ==========================================
+// 1. Our Service Slider Execution
+// ==========================================
 const ourServiceButtons = document.querySelectorAll(
   "[data-service-slider-button]",
 );
@@ -126,18 +121,21 @@ const ourServiceCards = document.querySelectorAll("[data-card]");
 if (ourServiceWrapper && ourServiceCards.length > 0) {
   const ourServiceSlider = createSliderObject(
     ourServiceWrapper,
-    37,
+    37, // Gap matches design token
     ourServiceButtons,
     ourServiceCards,
   );
-  ourServiceSlider.cardsShown = 3;
+  ourServiceSlider.cardsShown = 3; // Displays 3 columns simultaneously
   ourServiceSlider.moveX();
 }
 
-// Testimonials section
+// ==========================================
+// 2. Testimonials Slider Execution
+// ==========================================
 const testimonialsButtons = document.querySelectorAll(
   "[data-testimonial-slider-button]",
 );
+// Targets your moving container wrapper element safely
 const testimonialsWrapper = document.querySelector(
   ".testimonials-cards-wrapper",
 );
@@ -146,10 +144,10 @@ const testimonialsCards = document.querySelectorAll(".testimonial-card");
 if (testimonialsWrapper && testimonialsCards.length > 0) {
   const testimonialsSlider = createSliderObject(
     testimonialsWrapper,
-    135,
+    135, // Premium spacing gap token
     testimonialsButtons,
     testimonialsCards,
   );
-  testimonialsSlider.cardsShown = 2;
+  testimonialsSlider.cardsShown = 2; // Displays 2 review blocks simultaneously
   testimonialsSlider.moveX();
 }
