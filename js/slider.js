@@ -1,4 +1,4 @@
-// Slider Object Function - Refacotored by Google GEMINI AI
+// Slider Object Function - Refactored by Google GEMINI AI
 function createSliderObject(wrapper, gap, btns, cards) {
   return {
     wrapper: wrapper,
