@@ -22,7 +22,7 @@ burgerBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
 });
 
-//By GEMINI AI -->
+// Refactored by GEMINI AI -->
 // DOM Elements
 const headerNav = document.querySelector("[data-header-nav]");
 const headerMenuLinks = document.querySelectorAll("[data-nav-menu-item]");
